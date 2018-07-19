@@ -56,7 +56,7 @@ lep_df['HOVER'] = 'Geography: ' + lep_df.Geography + \
 # Create overlay data for each language option
 overlay_data = {
     lng.lower(): json.loads(lep_df.loc[lep_df[lng] > 0, :].to_json())
-    for lng in langs
+    for lng in langs[1:]
 }
 
 # Generate colors for each language
